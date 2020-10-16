@@ -8,8 +8,16 @@
              x:Class="vkladki.MainPage">
 
     <TabbedPage.Children>
-        <local:Jaanuar/>
-        <local:Veebruar/>
+        <local:Talv/>
+        <local:Märts/>
+        <local:Aprill/>
+        <local:Mai/>
+        <local:Juuni/>
+        <local:Juuli/>
+        <local:August/>
+        <local:September/>
+        <local:Oktoober/>
+        <local:November/>
     </TabbedPage.Children>
     
     

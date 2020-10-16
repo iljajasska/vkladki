@@ -28,12 +28,12 @@ namespace vkladki
                     new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }
                 }
         };
-            Label nimetus = new Label { Text = "Jaanuari pilt", FontSize = 30 };
+            Label nimetus = new Label { Text = "Январь", FontSize = 30 };
             Image img = new Image { Source = "jaanuar.jpg" };
-            Label kirjeldus = new Label { Text = "Jaanuar on esimene aasta kuu!!" };
+            Label kirjeldus = new Label { Text = "Первый месяц года в юлианском и григорианском календарях, одиннадцатый месяц староримского года, начинавшегося до реформы Цезаря с марта. " };
             grd.Children.Add(nimetus, 0, 0);
-            grd.Children.Add(img, 0, 0);
-            grd.Children.Add(kirjeldus, 0, 0);
+            grd.Children.Add(img, 0, 1);
+            grd.Children.Add(kirjeldus, 0, 2);
             Content = grd;
         }
     }

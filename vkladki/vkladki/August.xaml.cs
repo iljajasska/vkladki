@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace vkladki
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Veebruar : ContentPage
+    public partial class August : ContentPage
     {
-        public Veebruar()
+        public August()
         {
             InitializeComponent();
             Grid grd = new Grid
@@ -28,9 +28,9 @@ namespace vkladki
                     new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }
                 }
             };
-            Label nimetus = new Label { Text = "Февраль", FontSize = 30 };
-            Image img = new Image { Source = "veebruar.jpg" };
-            Label kirjeldus = new Label { Text = "Второй месяц в юлианском и григорианском календарях, двенадцатый месяц староримского года, начинавшегося до реформы Цезаря с марта. Это самый короткий месяц года, и единственный с числом дней менее 30: имеет 28 дней в обычном году и 29 дней в високосные годы." };
+            Label nimetus = new Label { Text = "Август", FontSize = 30 };
+            Image img = new Image { Source = "august.jpg" };
+            Label kirjeldus = new Label { Text = "Восьмой месяц года в юлианском и григорианском календарях, шестой месяц староримского года, начинавшегося до реформы Цезаря с марта. Один из семи месяцев длиной в 31 день." };
             grd.Children.Add(nimetus, 0, 0);
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);
