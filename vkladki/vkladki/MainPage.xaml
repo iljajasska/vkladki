@@ -5,10 +5,13 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:vkladki;assembly=vkladki"
              mc:Ignorable="d"
-             x:Class="vkladki.MainPage">
+             x:Class="vkladki.MainPage"
+             Title="aasta">
 
     <TabbedPage.Children>
-        <local:Talv/>
+        <local:Detsember/>
+        <local:Jaanuar/>
+        <local:Veebruar/>
         <local:Märts/>
         <local:Aprill/>
         <local:Mai/>
