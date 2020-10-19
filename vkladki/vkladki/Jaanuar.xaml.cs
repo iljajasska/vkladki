@@ -28,9 +28,16 @@ namespace vkladki
                     new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }
                 }
         };
-            Label nimetus = new Label { Text = "Январь", FontSize = 30 };
+            Label nimetus = new Label { Text = "Январь", FontSize = 30, TextColor = Color.DeepSkyBlue };
             Image img = new Image { Source = "jaanuar.jpg" };
             Label kirjeldus = new Label { Text = "Первый месяц года в юлианском и григорианском календарях, одиннадцатый месяц староримского года, начинавшегося до реформы Цезаря с марта. " };
+            var tap = new TapGestureRecognizer();
+            tap.Tapped += async (s, e) =>
+            {
+                img = (Image)s;
+                await DisplayAlert("Информация", "Праздник в январе: 1 января - новогодние каникулы!", "Закрыть");
+            };
+            img.GestureRecognizers.Add(tap);
             grd.Children.Add(nimetus, 0, 0);
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);

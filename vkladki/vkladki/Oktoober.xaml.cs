@@ -28,16 +28,16 @@ namespace vkladki
                     new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star) }
                 }
             };
-            Label nimetus = new Label { Text = "Октябрь", FontSize = 30 };
+            Label nimetus = new Label { Text = "Октябрь", FontSize = 30, TextColor = Color.Orange };
             Image img = new Image { Source = "oktoober.jpg" };
+            Label kirjeldus = new Label { Text = "Десятый месяц Григорианского календаря. Восьмой месяц староримского года, начинавшегося до реформы Цезаря с марта. Один из семи месяцев длиной в 31 день." };
             var tap = new TapGestureRecognizer();
             tap.Tapped += async (s, e) =>
-             {
-                 img = (Image)s;
-                 await DisplayAlert("Информация", " ", "Закрыть");
-             };
+            {
+                img = (Image)s;
+                await DisplayAlert("Информация", "Праздник в октябре: 20 октября - день повара!", "Закрыть");
+            };
             img.GestureRecognizers.Add(tap);
-            Label kirjeldus = new Label { Text = "Десятый месяц Григорианского календаря. Восьмой месяц староримского года, начинавшегося до реформы Цезаря с марта. Один из семи месяцев длиной в 31 день." };
             grd.Children.Add(nimetus, 0, 0);
             grd.Children.Add(img, 0, 1);
             grd.Children.Add(kirjeldus, 0, 2);
